@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>지족동</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            min-height: max(884px, 100dvh);
+            max-width: 375px;margin: 0 auto;position: relative;overflow-x: hidden;}
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background-color: white;
+        }
+        .location-dropdown {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;font-weight: bold;
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .category-bar {
+            display: flex;
+            padding: 12px 16px;
+            gap: 8px;
+            border-bottom: 1px solid #e5e7eb;overflow-x: auto;}
+        .category-button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+            background-color: #f3f4f6;border-radius: 20px;
+            font-size: 0.875rem;white-space: nowrap;}
+        .product-item {
+            display: flex;
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;gap: 16px;
+        }
+        .product-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;}
+        .product-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;}
+        .product-title {
+            font-size: 1rem;font-weight: normal;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .product-meta {
+            font-size: 0.75rem;color: #6b7280;margin-bottom: 4px;
+        }
+        .product-price {
+            font-size: 1rem;font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .product-stats {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;color: #6b7280;margin-top: auto;}
+        .write-button-container {position: fixed;
+            bottom: 80px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: flex-end;padding-right: 16px;pointer-events: none;z-index: 10;
+        }
+        .write-button {
+            background-color: #ff6f00;color: white;
+            padding: 12px 20px;
+            border-radius: 9999px;display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;}
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;transform: translateX(-50%);width: 100%;max-width: 375px;display: flex;
+            justify-content: space-around;align-items: center;padding-top: 8px;padding-bottom: max(8px, env(safe-area-inset-bottom));background-color: white;
+            border-top: 1px solid #e5e7eb;z-index: 20;}
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.625rem;color: #6b7280;flex: 1;text-align: center;
+        }
+        .nav-item .material-icons {
+            font-size: 1.5rem;margin-bottom: 2px;
+        }
+        .nav-item.active {
+            color: #000000;}
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white">
+<header class="top-bar sticky top-0 z-10">
+<div class="location-dropdown">
+<span>지족동</span>
+<span class="material-icons">expand_more</span>
+</div>
+<div class="icons">
+<span class="material-icons text-3xl">search</span>
+<span class="material-icons text-3xl">notifications_none</span>
+</div>
+</header>
+<div class="category-bar">
+<button class="category-button">
+<span class="material-icons text-sm">search</span>
+            알바
+        </button>
+<button class="category-button">
+<span class="material-icons text-sm">home</span>
+            부동산
+        </button>
+<button class="category-button">
+<span class="material-icons text-sm">directions_car</span>
+            중고차
+        </button>
+</div>
+<main class="pb-20">
+<div class="product-item">
+<img alt="Bosch drill" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKR1hDV_yH5YN1z49_JjbtjRIJZ9Sszub4wxkAlpK3WQ6yBKOaW3i54Ay93r5uVUtNgacdoE5W_KhiEB3CMgclWJnCaNwyhYGtgqkeQE0x4fM3SVllKRAdhYZbaJaOhSV0n56d_pFJ4x8SIwQnDJDtHNgrvA8mSvlP87_2gy1CZmoHzy3v1dSWjAQuu9_EbsEFWqgXlZ9VQS0KTj3gX1dCNVtCqWKfKH8ukQLCRKH_7bqVreATHScXCddPuLYrC1hVyHP5MDECb5lh"/>
+<div class="product-details">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="product-title">보쉬 충전 임팩 드라이버 GDR18V-220C 드릴 베...</h3>
+<p class="product-meta">어은동 · 1시간 전</p>
+<p class="product-price">80,000원</p>
+</div>
+<span class="material-icons text-gray-500">more_vert</span>
+</div>
+<div class="product-stats ml-auto">
+<span class="material-icons text-sm">chat_bubble_outline</span>
+<span>1</span>
+<span class="material-icons text-sm">favorite_border</span>
+<span>2</span>
+</div>
+</div>
+</div>
+<div class="product-item">
+<img alt="Car seat" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2UAjDXQMH-E2NjfmZE1i51vnBEgxM5nwiBti9JudiPuYvtMVEofk7niVxz-dhosAGGz93zfGAU9ZIdy_aPTZ-6513LWcaMoA4MZY-rrQrpiuFf0w08YLmn2X5OAwIqIF1r77kFVuPqdehPZlbNNeZ-2zSVbzSy9KMhpdcWh5tmjiL4FiiX8sgW5CqtxMgbNW4OJS9E9CEhudSwu-58Qd4ROINQo26TaWpRXnxsT8fLBLi6FVNtK9tDoXs-b4BjaS2Yhctcpa8NkQd"/>
+<div class="product-details">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="product-title">김포(사우동) -&gt; 대전으로 짐 옮겨주실 분</h3>
+<p class="product-meta">서구 둔산동 · 알바</p>
+<p class="product-price">건당 30,000원</p>
+</div>
+<span class="material-icons text-gray-500">more_vert</span>
+</div>
+<div class="product-stats ml-auto">
+<span class="material-icons text-sm">chat_bubble_outline</span>
+<span>27</span>
+<span class="material-icons text-sm">favorite_border</span>
+<span>34</span>
+</div>
+</div>
+</div>
+<div class="product-item">
+<img alt="Lift table" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkXTfvViXotPgQd_ynmCp-qRfzQy_WS4Bd1non8HwNkN6nOG9xAfhg4ArhO8eGpzmZ4Srw_YcKtaZBefyyfy75cs0ZsLzJJvrIu5CClzGP4elhKCtTJh5Wf8hlAADz1aHf-MWgLR03wMUBjF4-fWXN9HReJqxiiDV1B6vz3alenJp1T6ffpeyLM3HMcfYV9_Vjl-_M7Wo8dKkq6QW0AXpBojsK_S5ONwKZwOl10GViJabcJIJKESUXCThx5hmayK-xkRKSO5hHuejZ"/>
+<div class="product-details">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="product-title">리프트업 테이블</h3>
+<p class="product-meta">2.2km · 노은동 · 24분 전</p>
+<p class="product-price">나눔🧡</p>
+</div>
+<span class="material-icons text-gray-500">more_vert</span>
+</div>
+<div class="product-stats ml-auto">
+<span class="material-icons text-sm">chat_bubble_outline</span>
+<span>1</span>
+<span class="material-icons text-sm">favorite_border</span>
+<span>2</span>
+</div>
+</div>
+</div>
+<div class="product-item">
+<img alt="Wooden table" class="product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbLGSa_LfL4ET-RqjjGXHQzlDoj1KvQvsLKmL6qAiC-agiL7f0wbuDDoNwFjyh49IvpknbABq9uBw0Osy8TQp4d8M-uWM0vdb1FWFdsJ-SVnuNY3EzmQG11DHcYb9oE33oj-YAozJiBFRZdpBfCukGPJkTOmLXlCTth96O1gB-EutJKoCSrJwbWp-ZfyiLcWf8zjYXCksfu4WuQ6f5MHMHwhqLtuFVBaf0ZClA0icOejk7zDwzkjKyaaISXEeCh8VwFSG3F9YOqJZU"/>
+<div class="product-details">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="product-title">나무 탁자 5천원</h3>
+<p class="product-meta">2.2km · 노은동 · 44분 전</p>
+<p class="product-price">5,000원</p>
+</div>
+<span class="material-icons text-gray-500">more_vert</span>
+</div>
+</div>
+</div>
+</main>
+<div class="write-button-container">
+<button class="write-button">
+<span class="material-icons">add</span>
+        글쓰기
+    </button>
+</div>
+<nav class="bottom-nav">
+<div class="nav-item active">
+<span class="material-icons">home</span>
+<span>홈</span>
+</div>
+<div class="nav-item">
+<span class="material-icons">feed</span>
+<span>동네생활</span>
+</div>
+<div class="nav-item">
+<span class="material-icons">location_on</span>
+<span>동네지도</span>
+</div>
+<div class="nav-item">
+<span class="material-icons">chat_bubble</span>
+<span>채팅</span>
+</div>
+<div class="nav-item">
+<span class="material-icons">person</span>
+<span>나의당근</span>
+</div>
+</nav>
+
+</body></html>
